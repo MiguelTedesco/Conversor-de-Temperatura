@@ -1,0 +1,22 @@
+body{
+    padding-top: 25vh;
+    text-align: center;
+    background-color:rgb(202, 202, 202)
+}
+div{
+    padding: 10px;
+}
+input{
+    width: 10vw;
+    height: 4vh;
+    border-color: rgb(0, 0, 0);
+    border-radius: 8px;
+}
+button{
+    letter-spacing: 2px;
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
+    border-color: rgb(0, 0, 0);
+    background-color: rgb(160, 255, 223);
+}

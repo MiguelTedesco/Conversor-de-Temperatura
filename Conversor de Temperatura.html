@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css" />
+  <title>Conversor de Temperatura</title>
+</head>
+<body>
+  <div>
+    <input type="number" id="cel" placeholder="Celsius">
+    <button id="buttonO">°C</button>
+    </div>
+  <div>
+    <input type="number" id="fah" placeholder="Fahrenheit">
+    <button id="buttonT">°F</button>
+  </div>
+  <div>
+    <input type="number" id="kel" placeholder="Kelvin">
+    <button id="buttonH">K</button>
+  </div>
+  <div>
+    <input type="number" id="ran" placeholder="Rankine">
+    <button id="buttonF">°R</button>
+</div>
+</body>
+<script>
+  button1 = document.querySelector("#buttonO").onclick = function(){
+    cel = document.querySelector("#cel")
+    celv = parseInt(cel.value); 
+    let valuef = ((celv*9/5)+32).toFixed(2);
+    let valuek = (celv+273.15).toFixed(2);
+    let valuer = (((celv+273.15)*9)/5).toFixed(2);
+    document.getElementById('fah').placeholder=(valuef)
+    document.getElementById('kel').placeholder=(valuek)
+    document.getElementById('ran').placeholder=(valuer)
+    document.getElementById('fah').value=""
+    document.getElementById('kel').value=""
+    document.getElementById('ran').value=""
+  }
+  button2 = document.querySelector("#buttonT").onclick = function(){
+    fah = document.querySelector("#fah")
+    fahv = parseInt(fah.value);
+    let valuec = ((fahv-32)*5/9).toFixed(2);
+    let valuek = (((fahv-32)*5/9)+273.15).toFixed(2);
+    let valuer = (fahv+459).toFixed(2);
+    document.getElementById('cel').placeholder=(valuec)
+    document.getElementById('kel').placeholder=(valuek)
+    document.getElementById('ran').placeholder=(valuer)
+    document.getElementById('cel').value=""
+    document.getElementById('kel').value=""
+    document.getElementById('ran').value=""
+  }
+  button3 = document.querySelector("#buttonH").onclick = function(){
+    kel = document.querySelector("#kel")
+    kelv = parseInt(kel.value);
+    let valuec = (kelv-273.15).toFixed(2);
+    let valuef = ((kelv-273.15)*9/5+32).toFixed(2);
+    let valuer = (kelv*1.8).toFixed(2);
+    document.getElementById('cel').placeholder=(valuec)
+    document.getElementById('fah').placeholder=(valuef)
+    document.getElementById('ran').placeholder=(valuer)
+    document.getElementById('cel').value=""
+    document.getElementById('fah').value=""
+    document.getElementById('ran').value=""
+  }
+  button4 = document.querySelector("#buttonF").onclick = function(){
+    ran = document.querySelector("#ran")
+    ranv = parseInt(ran.value);
+    let valuec = ((ranv-491.67)*5/9).toFixed(2);
+    let valuef = (ranv-459.67).toFixed(2);
+    let valuek = (ranv*5/9).toFixed(2);
+    document.getElementById('cel').placeholder=(valuec)
+    document.getElementById('fah').placeholder=(valuef)
+    document.getElementById('kel').placeholder=(valuek)
+    document.getElementById('cel').value=""
+    document.getElementById('fah').value=""
+    document.getElementById('kel').value=""
+  }
+  </script>
+</html>
